@@ -6,7 +6,7 @@
 Welcome to Colosseum's documentation!
 =====================================
 
-.. automodule:: sdks.python.colosseum_sdk
+.. automodule:: src.colosseum_sdk
     :members:
 .. toctree::
    :maxdepth: 2
