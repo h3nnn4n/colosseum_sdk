@@ -10,7 +10,7 @@ homepage = "https://www.colosseum.website/"
 keywords = ["automated-tournaments", "multi-agents", "sdk"]
 
 packages = [
-    { include = "python" }
+    { include = "src" }
 ]
 
 classifiers = [
