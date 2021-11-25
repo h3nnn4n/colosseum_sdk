@@ -6,7 +6,7 @@
 Welcome to Colosseum's documentation!
 =====================================
 
-.. automodule:: src.colosseum_sdk
+.. automodule:: colosseum_sdk.colosseum_sdk
     :members:
 .. toctree::
    :maxdepth: 2
