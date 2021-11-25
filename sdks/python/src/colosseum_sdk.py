@@ -588,6 +588,7 @@ class BaseCollection:
     def random(self):
         """
         Returns a random object from a collection, or None if it is empty.
+
         Returns
         -------
         object
