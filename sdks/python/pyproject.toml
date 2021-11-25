@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "colosseum_sdk"
-version = "0.1.1"
+version = "0.1.3"
 description = "Colosseum's SDK for developing agents"
 authors = ["h3nnn4n <colosseum@h3nnn4n.me>"]
 license = "MIT"
@@ -11,7 +11,7 @@ documentation = "https://colosseum-sdk.readthedocs.io/en/latest/"
 keywords = ["automated-tournaments", "multi-agents", "sdk"]
 
 packages = [
-    { include = "src" }
+    { include = "colosseum_sdk" }
 ]
 
 classifiers = [
