@@ -1,9 +1,24 @@
 [tool.poetry]
 name = "colosseum_sdk"
-version = "0.1.0"
-description = "Colosseum's sdk for developing agents"
+version = "0.1.1"
+description = "Colosseum's SDK for developing agents"
 authors = ["h3nnn4n <colosseum@h3nnn4n.me>"]
 license = "MIT"
+readme = "README.md"
+repository = "https://github.com/h3nnn4n/colosseum_sdk/"
+homepage = "https://www.colosseum.website/"
+keywords = ["automated-tournaments", "multi-agents", "sdk"]
+
+packages = [
+    { include = "src" }
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers"
+]
 
 [tool.poetry.dependencies]
 python = "3.10"
