@@ -11,7 +11,7 @@ jobs:
 
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.8'
+          python-version: '3.10'
 
       - name: Install isort
         run: |
@@ -19,4 +19,5 @@ jobs:
 
       - name: Run isort
         run: |
+          cd sdks/python/
           python3 -m isort --check-only .
