@@ -57,7 +57,7 @@ class BaseEntity:
 
     def distance_to(self, entity):
         """
-        Returns the (euclidian) distance between this and another entity. The
+        Returns the (euclidean) distance between this and another entity. The
         `entity` param can be a tuple or list of X coordinated, a dict that has
         a key named `position` or a python object with a `position` property.
         """
@@ -447,7 +447,7 @@ class BaseCollection:
 
         Example
         -------
-        All of the followin calls are equivalent and returns the same results::
+        All of the following calls are equivalent and returns the same results::
 
             actor = Actor({"id": "foo", "position": (1, 1)})
             state.actors.sort_by_distance_to(actor)
@@ -549,7 +549,7 @@ class BaseCollection:
     @property
     def first(self):
         """
-        Returns the first object of a collection, if any. First is definied as
+        Returns the first object of a collection, if any. First is defined as
         the in the json blob used to communicate the world state to the Agent.
         The order isn't guaranteed. The result of this method may change between
         different simulation epochs.
@@ -557,7 +557,7 @@ class BaseCollection:
         Returns
         -------
         object
-            Returns the first object from the collection, if any, othewise
+            Returns the first object from the collection, if any, otherwise
             `None` is returned.
         """
         if self.count > 0:
@@ -568,7 +568,7 @@ class BaseCollection:
     @property
     def last(self):
         """
-        Returns the last object of a collection, if any. Last is definied as
+        Returns the last object of a collection, if any. Last is defined as
         the in the json blob used to communicate the world state to the Agent.
         The order isn't guaranteed. The result of this method may change between
         different simulation epochs.
@@ -576,7 +576,7 @@ class BaseCollection:
         Returns
         -------
         object
-            Returns the last object from the collection, if any, othewise
+            Returns the last object from the collection, if any, otherwise
             `None` is returned.
         """
         if self.count > 0:
@@ -652,9 +652,9 @@ class Foods(BaseCollection):
 
 class State:
     """
-    Encapsulates the world state. Can be used to issue commands to controlable
+    Encapsulates the world state. Can be used to issue commands to controllable
     entities, filter entities, etc. The state is writable, but only actions set
-    by calling the action methods have an efect in the simulation. The
+    by calling the action methods have an effect in the simulation. The
     :class:`State` and its children entities (food, actors and bases) are
     persisted across epochs and can have custom data set on them.
     """
@@ -715,7 +715,7 @@ class State:
         Returns
         -------
         list[string]
-            A list with all the `agent_id` registered in the game match. This can be combined with other methods to filter units from a specifc agent, including the one holding the current :class:`State` object.
+            A list with all the `agent_id` registered in the game match. This can be combined with other methods to filter units from a specific agent, including the one holding the current :class:`State` object.
         """
         return self._agent_ids
 
@@ -816,7 +816,7 @@ class Agent:
         an autolose.
 
         This `self.run` is set to `False` and `self.stop_reason` to the payload
-        from `stop`, which contains the reason why the agent was stoped.
+        from `stop`, which contains the reason why the agent was stopped.
         Usually because the game ended. Other causes may be because the
         cheating was detected, or because the agent lost all units and can't
         continue to play.
@@ -860,7 +860,7 @@ class Agent:
 
         When a new world state is received :meth:`post_state_update` is
         caled. When inheriting from :class:`Agent`, this method can be
-        overriden to trigger the Agent logic.
+        overridden to trigger the Agent logic.
         """
         logging.debug("waiting state update")
         self._next_response = {}
@@ -903,7 +903,7 @@ class Agent:
 
     def post_state_update(self):
         """
-        Can be overriden by child classes. It is called immediately after a new
+        Can be overridden by child classes. It is called immediately after a new
         world state is received.
         """
         pass
